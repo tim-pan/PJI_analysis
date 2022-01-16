@@ -1,0 +1,888 @@
+
+C4.5 [release 8] decision tree generator	Tue Dec  7 11:11:18 2021
+----------------------------------------
+
+    Options:
+	File stem <data_final>
+	Trees evaluated on unseen cases
+
+Read 1406 cases (50 attributes) from data_final.data
+
+Decision Tree:
+
+CBC_RDWCV <= 0.103787 :
+|   Commercial_ALBC = 1: 1 (4.0/1.0)
+|   Commercial_ALBC = 0:
+|   |   Hypertension Uncomplicated = 1: 0 (5.0)
+|   |   Hypertension Uncomplicated = 0:
+|   |   |   LOS <= 0.0422535 : 0 (38.0/1.0)
+|   |   |   LOS > 0.0422535 :
+|   |   |   |   GOT <= 0.0489676 :
+|   |   |   |   |   GOT > 0.0376106 : 0 (32.0)
+|   |   |   |   |   GOT <= 0.0376106 :
+|   |   |   |   |   |   Na <= 0.815895 : 1 (2.0)
+|   |   |   |   |   |   Na > 0.815895 : 0 (7.0)
+|   |   |   |   GOT > 0.0489676 :
+|   |   |   |   |   GOT > 0.0674041 : 0 (7.0)
+|   |   |   |   |   GOT <= 0.0674041 :
+|   |   |   |   |   |   CBC_Platelet <= 0.172593 : 0 (5.0)
+|   |   |   |   |   |   CBC_Platelet > 0.172593 :
+|   |   |   |   |   |   |   SEX_F = 0: 1 (3.0)
+|   |   |   |   |   |   |   SEX_F = 1:
+|   |   |   |   |   |   |   |   AGE <= 0.62069 : 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   AGE > 0.62069 : 1 (5.0)
+CBC_RDWCV > 0.103787 :
+|   CBC_RDW <= 0.338969 :
+|   |   Alcohol Abuse = 0:
+|   |   |   OP_time_hour <= 0.177645 :
+|   |   |   |   Congestive Heart Failure = 1: 1 (3.0)
+|   |   |   |   Congestive Heart Failure = 0:
+|   |   |   |   |   Lung disease_0 = 0: 0 (3.0)
+|   |   |   |   |   Lung disease_0 = 1:
+|   |   |   |   |   |   Renal Failure = 1: 0 (3.0)
+|   |   |   |   |   |   Renal Failure = 0:
+|   |   |   |   |   |   |   Psyciatric disorder_0 = 0: 0 (2.0)
+|   |   |   |   |   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   |   |   |   |   Blood_trans = 1: 0 (2.0)
+|   |   |   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   |   |   GOT <= 0.0429204 : 0 (14.0)
+|   |   |   |   |   |   |   |   |   GOT > 0.0429204 :
+|   |   |   |   |   |   |   |   |   |   Diagnosis_3 = 1: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Diagnosis_3 = 0:
+|   |   |   |   |   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   Heart disease_0 = 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Heart disease_0 = 1:[S1]
+|   |   |   |   |   |   |   |   |   |   |   Diabetes = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   GPT <= 0.0448413 : 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   GPT > 0.0448413 : 0 (2.0)
+|   |   |   OP_time_hour > 0.177645 :
+|   |   |   |   LOS <= 0.15493 :
+|   |   |   |   |   Crea <= 0.101871 :
+|   |   |   |   |   |   Diagnosis_5 = 1: 1 (11.0/1.0)
+|   |   |   |   |   |   Diagnosis_5 = 0:
+|   |   |   |   |   |   |   Hypothyroidism = 0:
+|   |   |   |   |   |   |   |   SEX_F = 0:
+|   |   |   |   |   |   |   |   |   Fluid and Electrolyte Disorders = 1: 1 (8.0)
+|   |   |   |   |   |   |   |   |   Fluid and Electrolyte Disorders = 0:
+|   |   |   |   |   |   |   |   |   |   Anemia_0 = 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Anemia_0 = 1:
+|   |   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   K <= 0.438079 :[S2]
+|   |   |   |   |   |   |   |   |   |   |   |   K > 0.438079 :[S3]
+|   |   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   AGE > 0.666667 : 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AGE <= 0.666667 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.193018 : 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.193018 : 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   SEX_F = 1:
+|   |   |   |   |   |   |   |   |   CBC_WBC <= 0.0288033 :
+|   |   |   |   |   |   |   |   |   |   Na <= 0.79251 : 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Na > 0.79251 :
+|   |   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.168631 : 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.168631 : 0 (22.0/1.0)
+|   |   |   |   |   |   |   |   |   CBC_WBC > 0.0288033 :
+|   |   |   |   |   |   |   |   |   |   Diagnosis_2 = 0:
+|   |   |   |   |   |   |   |   |   |   |   Psyciatric disorder_0 = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   Blood_trans = 1: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   BUN > 0.117568 : 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BUN <= 0.117568 :[S4]
+|   |   |   |   |   |   |   |   |   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   BUN <= 0.106262 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   elx3 = 1: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   elx3 = 0:[S5]
+|   |   |   |   |   |   |   |   |   |   |   |   BUN > 0.106262 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   ASA <= 0.422222 :[S6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ASA > 0.422222 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Liver Disease = 0:[S7]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Liver Disease = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGE <= 0.563218 : 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AGE > 0.563218 : 1 (12.0)
+|   |   |   |   |   |   |   |   |   |   Diagnosis_2 = 1:[S8]
+|   |   |   |   |   |   |   Hypothyroidism = 1:
+|   |   |   |   |   |   |   |   Psyciatric disorder_0 = 0: 1 (2.0)
+|   |   |   |   |   |   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   |   |   |   |   |   GPT <= 0.0534392 : 0 (7.0)
+|   |   |   |   |   |   |   |   |   GPT > 0.0534392 : 1 (2.0)
+|   |   |   |   |   Crea > 0.101871 :
+|   |   |   |   |   |   Coagulopathy = 1: 1 (2.0)
+|   |   |   |   |   |   Coagulopathy = 0:
+|   |   |   |   |   |   |   Anemia_0 = 0: 0 (5.0)
+|   |   |   |   |   |   |   Anemia_0 = 1:
+|   |   |   |   |   |   |   |   Liver Disease = 1: 0 (5.0)
+|   |   |   |   |   |   |   |   Liver Disease = 0:
+|   |   |   |   |   |   |   |   |   elx3 = 1: 1 (4.0)
+|   |   |   |   |   |   |   |   |   elx3 = 0:
+|   |   |   |   |   |   |   |   |   |   Crea <= 0.136623 :[S9]
+|   |   |   |   |   |   |   |   |   |   Crea > 0.136623 :
+|   |   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.210302 : 1 (14.0)
+|   |   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.210302 :
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_RBC <= 0.407431 : 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_RBC > 0.407431 : 1 (3.0)
+|   |   |   |   LOS > 0.15493 :
+|   |   |   |   |   Coagulopathy = 1: 0 (3.0/1.0)
+|   |   |   |   |   Coagulopathy = 0:
+|   |   |   |   |   |   Rheumatoid Arthritis/collagen = 1: 0 (2.0/1.0)
+|   |   |   |   |   |   Rheumatoid Arthritis/collagen = 0:
+|   |   |   |   |   |   |   CBC_RBC > 0.485514 : 0 (4.0/1.0)
+|   |   |   |   |   |   |   CBC_RBC <= 0.485514 :
+|   |   |   |   |   |   |   |   cci1 = 1: 1 (24.0)
+|   |   |   |   |   |   |   |   cci1 = 0:
+|   |   |   |   |   |   |   |   |   CBC_RDWCV <= 0.137634 : 0 (2.0)
+|   |   |   |   |   |   |   |   |   CBC_RDWCV > 0.137634 :
+|   |   |   |   |   |   |   |   |   |   Hypertension Uncomplicated = 0: 1 (15.0)
+|   |   |   |   |   |   |   |   |   |   Hypertension Uncomplicated = 1:
+|   |   |   |   |   |   |   |   |   |   |   BUN <= 0.160553 : 1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   BUN > 0.160553 : 0 (3.0/1.0)
+|   |   Alcohol Abuse = 1:
+|   |   |   K <= 0.483591 : 1 (22.0/1.0)
+|   |   |   K > 0.483591 : 0 (3.0)
+|   CBC_RDW > 0.338969 :
+|   |   Renal Failure = 1: 1 (2.0)
+|   |   Renal Failure = 0:
+|   |   |   Solid Tumor without Metastasis = 0:
+|   |   |   |   ASA <= 0.333333 : 0 (34.0)
+|   |   |   |   ASA > 0.333333 :
+|   |   |   |   |   LOS <= 0.0422535 : 0 (14.0)
+|   |   |   |   |   LOS > 0.0422535 :
+|   |   |   |   |   |   Anemia_0 = 0: 0 (2.0)
+|   |   |   |   |   |   Anemia_0 = 1:
+|   |   |   |   |   |   |   Peptic Ulcer Disease excluding bleeding = 1: 1 (2.0)
+|   |   |   |   |   |   |   Peptic Ulcer Disease excluding bleeding = 0:
+|   |   |   |   |   |   |   |   CBC_RBC > 0.4965 : 1 (4.0)
+|   |   |   |   |   |   |   |   CBC_RBC <= 0.4965 :
+|   |   |   |   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   |   |   |   Diagnosis_0 = 0: 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Diagnosis_0 = 1:
+|   |   |   |   |   |   |   |   |   |   |   Valvular Disease = 1: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Valvular Disease = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   SEX_F = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGE <= 0.574713 : 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGE > 0.574713 : 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SEX_F = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cci1 = 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cci1 = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ASA > 0.6 : 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ASA <= 0.6 :[S10]
+|   |   |   |   |   |   |   |   |   |   |   |   Diabetes = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   Na <= 0.810913 : 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Na > 0.810913 : 1 (2.0)
+|   |   |   |   |   |   |   |   |   Blood_trans = 1:
+|   |   |   |   |   |   |   |   |   |   CBC_MCHC > 0.60574 : 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   CBC_MCHC <= 0.60574 :
+|   |   |   |   |   |   |   |   |   |   |   Na <= 0.805117 : 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Na > 0.805117 : 0 (9.0)
+|   |   |   Solid Tumor without Metastasis = 1:
+|   |   |   |   CBC_HG <= 0.646735 : 1 (5.0)
+|   |   |   |   CBC_HG > 0.646735 : 0 (3.0)
+
+
+Subtree [S1]
+
+Rheumatoid Arthritis/collagen = 1: 1 (3.0/1.0)
+Rheumatoid Arthritis/collagen = 0:
+|   Drain = 0:
+|   |   Non_commercial_ALBC = 1: 0 (3.0)
+|   |   Non_commercial_ALBC = 0:
+|   |   |   K > 0.4996 : 0 (15.0)
+|   |   |   K <= 0.4996 :
+|   |   |   |   GOT > 0.0685841 : 1 (8.0/1.0)
+|   |   |   |   GOT <= 0.0685841 :
+|   |   |   |   |   Diagnosis_0 = 0: 0 (7.0)
+|   |   |   |   |   Diagnosis_0 = 1:
+|   |   |   |   |   |   GOT <= 0.05 : 0 (6.0)
+|   |   |   |   |   |   GOT > 0.05 :
+|   |   |   |   |   |   |   BUN <= 0.102806 : 0 (2.0)
+|   |   |   |   |   |   |   BUN > 0.102806 : 1 (3.0)
+|   Drain = 1:
+|   |   GOT > 0.0678466 : 0 (5.0)
+|   |   GOT <= 0.0678466 :
+|   |   |   OP_time_hour <= 0.154491 : 0 (3.0)
+|   |   |   OP_time_hour > 0.154491 : 1 (10.0/1.0)
+
+
+Subtree [S2]
+
+Other Neurological Disorders = 1: 0 (4.0/1.0)
+Other Neurological Disorders = 0:
+|   Congestive Heart Failure = 1: 1 (7.0/1.0)
+|   Congestive Heart Failure = 0:
+|   |   Diagnosis_0 = 0:
+|   |   |   Peptic Ulcer Disease excluding bleeding = 1: 1 (3.0)
+|   |   |   Peptic Ulcer Disease excluding bleeding = 0:
+|   |   |   |   Liver Disease = 0:
+|   |   |   |   |   Blood_trans = 1: 1 (5.0)
+|   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   CBC_MCV > 0.567719 : 1 (17.0/1.0)
+|   |   |   |   |   |   CBC_MCV <= 0.567719 :
+|   |   |   |   |   |   |   CBC_RDW <= 0.0657074 : 1 (3.0)
+|   |   |   |   |   |   |   CBC_RDW > 0.0657074 : 0 (8.0/1.0)
+|   |   |   |   Liver Disease = 1:
+|   |   |   |   |   CBC_RBC <= 0.452773 : 0 (2.0)
+|   |   |   |   |   CBC_RBC > 0.452773 : 1 (2.0)
+|   |   Diagnosis_0 = 1:
+|   |   |   LOS <= 0.028169 : 0 (4.0)
+|   |   |   LOS > 0.028169 :
+|   |   |   |   CBC_Platelet <= 0.188441 :
+|   |   |   |   |   Hypertension Uncomplicated = 1: 0 (6.0)
+|   |   |   |   |   Hypertension Uncomplicated = 0:
+|   |   |   |   |   |   AGE <= 0.678161 : 0 (4.0)
+|   |   |   |   |   |   AGE > 0.678161 : 1 (3.0/1.0)
+|   |   |   |   CBC_Platelet > 0.188441 :
+|   |   |   |   |   Solid Tumor without Metastasis = 1: 1 (3.0)
+|   |   |   |   |   Solid Tumor without Metastasis = 0:
+|   |   |   |   |   |   Psyciatric disorder_0 = 0: 1 (2.0)
+|   |   |   |   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   |   |   |   elx1 = 0:
+|   |   |   |   |   |   |   |   CBC_RDWCV <= 0.15194 : 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   CBC_RDWCV > 0.15194 : 0 (2.0)
+|   |   |   |   |   |   |   elx1 = 1:
+|   |   |   |   |   |   |   |   Blood_trans = 1: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   |   |   LOS <= 0.0704225 :
+|   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.218841 : 1 (15.0)
+|   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.218841 :
+|   |   |   |   |   |   |   |   |   |   |   Hypertension Uncomplicated = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_RDW <= 0.0809353 : 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_RDW > 0.0809353 :[S11]
+|   |   |   |   |   |   |   |   |   |   |   Hypertension Uncomplicated = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_HG <= 0.638144 : 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_HG > 0.638144 : 0 (2.0)
+|   |   |   |   |   |   |   |   |   LOS > 0.0704225 :
+|   |   |   |   |   |   |   |   |   |   cci1 = 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   cci1 = 1:
+|   |   |   |   |   |   |   |   |   |   |   UA <= 0.368481 : 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   UA > 0.368481 : 0 (4.0)
+
+
+Subtree [S3]
+
+Valvular Disease = 1: 0 (2.0)
+Valvular Disease = 0:
+|   Congestive Heart Failure = 1: 0 (2.0/1.0)
+|   Congestive Heart Failure = 0:
+|   |   Solid Tumor without Metastasis = 1: 0 (2.0/1.0)
+|   |   Solid Tumor without Metastasis = 0:
+|   |   |   Diagnosis_3 = 1: 1 (11.0)
+|   |   |   Diagnosis_3 = 0:
+|   |   |   |   Diabetes = 1: 1 (11.0)
+|   |   |   |   Diabetes = 0:
+|   |   |   |   |   Na > 0.816393 : 1 (44.0)
+|   |   |   |   |   Na <= 0.816393 :
+|   |   |   |   |   |   Blood_trans = 1: 1 (4.0)
+|   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   Heart disease_0 = 0: 1 (3.0)
+|   |   |   |   |   |   |   Heart disease_0 = 1:
+|   |   |   |   |   |   |   |   Lung disease_0 = 0: 1 (3.0)
+|   |   |   |   |   |   |   |   Lung disease_0 = 1:
+|   |   |   |   |   |   |   |   |   Psyciatric disorder_0 = 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Psyciatric disorder_0 = 1:[S12]
+
+
+Subtree [S4]
+
+Liver Disease = 0: 1 (3.0)
+Liver Disease = 1: 0 (2.0)
+
+
+Subtree [S5]
+
+Commercial_ALBC = 1: 1 (5.0/1.0)
+Commercial_ALBC = 0:
+|   Congestive Heart Failure = 1: 0 (3.0)
+|   Congestive Heart Failure = 0:
+|   |   Other Neurological Disorders = 1: 0 (2.0)
+|   |   Other Neurological Disorders = 0:
+|   |   |   CBC_RDW <= 0.0438849 : 1 (5.0)
+|   |   |   CBC_RDW > 0.0438849 :
+|   |   |   |   Fluid and Electrolyte Disorders = 1: 1 (3.0/1.0)
+|   |   |   |   Fluid and Electrolyte Disorders = 0:
+|   |   |   |   |   CBC_MCHC <= 0.6 :
+|   |   |   |   |   |   CBC_MCHC <= 0.541722 : 1 (2.0)
+|   |   |   |   |   |   CBC_MCHC > 0.541722 : 0 (32.0/1.0)
+|   |   |   |   |   CBC_MCHC > 0.6 :
+|   |   |   |   |   |   ASA > 0.577778 : 1 (7.0)
+|   |   |   |   |   |   ASA <= 0.577778 :
+|   |   |   |   |   |   |   UA <= 0.272562 : 1 (8.0/1.0)
+|   |   |   |   |   |   |   UA > 0.272562 : 0 (16.0/2.0)
+
+
+Subtree [S6]
+
+Solid Tumor without Metastasis = 1: 1 (4.0)
+Solid Tumor without Metastasis = 0:
+|   Heart disease_0 = 0:
+|   |   cci1 = 0: 1 (2.0)
+|   |   cci1 = 1: 0 (3.0)
+|   Heart disease_0 = 1:
+|   |   Diabetes = 0:
+|   |   |   elx1 = 0: 0 (3.0/1.0)
+|   |   |   elx1 = 1:
+|   |   |   |   Crea <= 0.0889986 :
+|   |   |   |   |   Peptic Ulcer Disease excluding bleeding = 0:
+|   |   |   |   |   |   Blood_trans = 1: 1 (13.0)
+|   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   Drain = 0: 1 (8.0)
+|   |   |   |   |   |   |   Drain = 1:
+|   |   |   |   |   |   |   |   K > 0.450429 : 1 (31.0)
+|   |   |   |   |   |   |   |   K <= 0.450429 :
+|   |   |   |   |   |   |   |   |   CBC_MCV <= 0.547544 : 0 (3.0)
+|   |   |   |   |   |   |   |   |   CBC_MCV > 0.547544 :
+|   |   |   |   |   |   |   |   |   |   AGE <= 0.597701 : 1 (22.0)
+|   |   |   |   |   |   |   |   |   |   AGE > 0.597701 :
+|   |   |   |   |   |   |   |   |   |   |   CBC_MCHC > 0.611479 : 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   CBC_MCHC <= 0.611479 :
+|   |   |   |   |   |   |   |   |   |   |   |   Non_commercial_ALBC = 0: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Non_commercial_ALBC = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   ASA > 0.355556 : 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ASA <= 0.355556 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CBC_MCV <= 0.574737 : 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CBC_MCV > 0.574737 : 0 (4.0)
+|   |   |   |   |   Peptic Ulcer Disease excluding bleeding = 1:
+|   |   |   |   |   |   CBC_MCV <= 0.536842 : 0 (2.0)
+|   |   |   |   |   |   CBC_MCV > 0.536842 : 1 (3.0)
+|   |   |   |   Crea > 0.0889986 :
+|   |   |   |   |   Commercial_ALBC = 1: 1 (2.0)
+|   |   |   |   |   Commercial_ALBC = 0:
+|   |   |   |   |   |   K <= 0.413722 : 1 (5.0)
+|   |   |   |   |   |   K > 0.413722 :
+|   |   |   |   |   |   |   Blood_trans = 0: 0 (9.0)
+|   |   |   |   |   |   |   Blood_trans = 1:
+|   |   |   |   |   |   |   |   CBC_MCV > 0.565877 : 1 (2.0)
+|   |   |   |   |   |   |   |   CBC_MCV <= 0.565877 :
+|   |   |   |   |   |   |   |   |   BUN <= 0.157529 : 0 (6.0)
+|   |   |   |   |   |   |   |   |   BUN > 0.157529 : 1 (2.0)
+|   |   Diabetes = 1:
+|   |   |   GPT <= 0.0470899 : 1 (6.0/1.0)
+|   |   |   GPT > 0.0470899 : 0 (5.0)
+
+
+Subtree [S7]
+
+CBC_Platelet <= 0.211852 :
+|   CBC_MCHC <= 0.55585 : 1 (2.0)
+|   CBC_MCHC > 0.55585 :
+|   |   CBC_RBC > 0.378675 : 0 (19.0)
+|   |   CBC_RBC <= 0.378675 :
+|   |   |   Heart disease_0 = 0: 0 (2.0)
+|   |   |   Heart disease_0 = 1: 1 (2.0)
+CBC_Platelet > 0.211852 :
+|   Valvular Disease = 1: 1 (4.0)
+|   Valvular Disease = 0:
+|   |   Peptic Ulcer Disease excluding bleeding = 1: 0 (2.0)
+|   |   Peptic Ulcer Disease excluding bleeding = 0:
+|   |   |   Renal Failure = 1: 1 (3.0)
+|   |   |   Renal Failure = 0:
+|   |   |   |   Rheumatoid Arthritis/collagen = 1: 1 (2.0)
+|   |   |   |   Rheumatoid Arthritis/collagen = 0:
+|   |   |   |   |   CBC_RDWCV > 0.189995 : 0 (8.0)
+|   |   |   |   |   CBC_RDWCV <= 0.189995 :
+|   |   |   |   |   |   elx1 = 0:
+|   |   |   |   |   |   |   LOS <= 0.028169 : 1 (3.0)
+|   |   |   |   |   |   |   LOS > 0.028169 :
+|   |   |   |   |   |   |   |   Lung disease_0 = 1: 0 (8.0)
+|   |   |   |   |   |   |   |   Lung disease_0 = 0:
+|   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.229703 : 0 (3.0)
+|   |   |   |   |   |   |   |   |   CBC_Platelet > 0.229703 : 1 (2.0)
+|   |   |   |   |   |   elx1 = 1:
+|   |   |   |   |   |   |   Solid Tumor without Metastasis = 1: 1 (3.0)
+|   |   |   |   |   |   |   Solid Tumor without Metastasis = 0:
+|   |   |   |   |   |   |   |   LOS > 0.0985916 : 1 (6.0)
+|   |   |   |   |   |   |   |   LOS <= 0.0985916 :
+|   |   |   |   |   |   |   |   |   Diagnosis_0 = 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Diagnosis_0 = 1:
+|   |   |   |   |   |   |   |   |   |   BUN > 0.154951 : 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   BUN <= 0.154951 :
+|   |   |   |   |   |   |   |   |   |   |   LOS <= 0.028169 :
+|   |   |   |   |   |   |   |   |   |   |   |   OP_time_hour <= 0.221557 : 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   OP_time_hour > 0.221557 : 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   LOS > 0.028169 :
+|   |   |   |   |   |   |   |   |   |   |   |   Lung disease_0 = 0: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Lung disease_0 = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes = 1: 1 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   GPT <= 0.0312169 : 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   GPT > 0.0312169 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   UA <= 0.29161 : 1 (17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   UA > 0.29161 :[S13]
+
+
+Subtree [S8]
+
+Peptic Ulcer Disease excluding bleeding = 1: 0 (3.0)
+Peptic Ulcer Disease excluding bleeding = 0:
+|   GPT > 0.0367725 : 1 (20.0)
+|   GPT <= 0.0367725 :
+|   |   ASA <= 0.444444 : 0 (5.0)
+|   |   ASA > 0.444444 : 1 (6.0/1.0)
+
+
+Subtree [S9]
+
+Congestive Heart Failure = 1: 0 (3.0)
+Congestive Heart Failure = 0:
+|   Valvular Disease = 1: 0 (3.0)
+|   Valvular Disease = 0:
+|   |   Other Neurological Disorders = 1: 0 (2.0)
+|   |   Other Neurological Disorders = 0:
+|   |   |   Psyciatric disorder_0 = 0: 0 (2.0)
+|   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   Rheumatoid Arthritis/collagen = 0:
+|   |   |   |   |   Renal Failure = 1: 1 (3.0/1.0)
+|   |   |   |   |   Renal Failure = 0:
+|   |   |   |   |   |   elx1 = 0: 0 (2.0)
+|   |   |   |   |   |   elx1 = 1:
+|   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   CBC_MCV <= 0.614474 :
+|   |   |   |   |   |   |   |   |   Heart disease_0 = 0: 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   Heart disease_0 = 1:
+|   |   |   |   |   |   |   |   |   |   Diagnosis_3 = 0:[S14]
+|   |   |   |   |   |   |   |   |   |   Diagnosis_3 = 1:
+|   |   |   |   |   |   |   |   |   |   |   BUN <= 0.114918 : 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   BUN > 0.114918 : 0 (4.0)
+|   |   |   |   |   |   |   |   CBC_MCV > 0.614474 :
+|   |   |   |   |   |   |   |   |   CBC_RDW > 0.097482 : 0 (5.0)
+|   |   |   |   |   |   |   |   |   CBC_RDW <= 0.097482 :
+|   |   |   |   |   |   |   |   |   |   CBC_WBC <= 0.0249151 : 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   CBC_WBC > 0.0249151 : 1 (12.0)
+|   |   |   |   |   |   |   Diabetes = 1:
+|   |   |   |   |   |   |   |   UA <= 0.314286 : 0 (2.0)
+|   |   |   |   |   |   |   |   UA > 0.314286 : 1 (4.0)
+|   |   |   |   Rheumatoid Arthritis/collagen = 1:
+|   |   |   |   |   Crea <= 0.118692 : 0 (3.0)
+|   |   |   |   |   Crea > 0.118692 : 1 (5.0)
+
+
+Subtree [S10]
+
+CBC_HG <= 0.640206 : 1 (2.0)
+CBC_HG > 0.640206 : 0 (9.0/1.0)
+
+
+Subtree [S11]
+
+Non_commercial_ALBC = 1: 0 (4.0)
+Non_commercial_ALBC = 0:
+|   Drain = 0: 0 (2.0)
+|   Drain = 1:
+|   |   ASA <= 0.377778 : 0 (2.0)
+|   |   ASA > 0.377778 : 1 (2.0)
+
+
+Subtree [S12]
+
+Rheumatoid Arthritis/collagen = 1: 1 (2.0)
+Rheumatoid Arthritis/collagen = 0:
+|   CBC_RDW <= 0.155755 : 1 (16.0/2.0)
+|   CBC_RDW > 0.155755 :
+|   |   CBC_RDW <= 0.232134 : 0 (5.0)
+|   |   CBC_RDW > 0.232134 : 1 (3.0/1.0)
+
+
+Subtree [S13]
+
+Commercial_ALBC = 1: 1 (6.0/1.0)
+Commercial_ALBC = 0:
+|   UA > 0.33356 : 1 (5.0)
+|   UA <= 0.33356 :
+|   |   Crea > 0.0915896 : 0 (7.0)
+|   |   Crea <= 0.0915896 :
+|   |   |   Crea > 0.0802385 : 1 (5.0)
+|   |   |   Crea <= 0.0802385 :
+|   |   |   |   CBC_WBC <= 0.0338996 : 1 (5.0/1.0)
+|   |   |   |   CBC_WBC > 0.0338996 : 0 (6.0)
+
+
+Subtree [S14]
+
+Peptic Ulcer Disease excluding bleeding = 1: 0 (2.0/1.0)
+Peptic Ulcer Disease excluding bleeding = 0:
+|   Hypertension Uncomplicated = 0:
+|   |   CBC_MCHC <= 0.604856 : 0 (27.0)
+|   |   CBC_MCHC > 0.604856 :
+|   |   |   cci1 = 0: 0 (2.0)
+|   |   |   cci1 = 1:
+|   |   |   |   CBC_RDW <= 0.0907674 :
+|   |   |   |   |   OP_time_hour > 0.341317 : 0 (4.0)
+|   |   |   |   |   OP_time_hour <= 0.341317 :
+|   |   |   |   |   |   Drain = 1: 1 (9.0/1.0)
+|   |   |   |   |   |   Drain = 0:
+|   |   |   |   |   |   |   UA <= 0.357143 : 0 (3.0)
+|   |   |   |   |   |   |   UA > 0.357143 : 1 (3.0)
+|   |   |   |   CBC_RDW > 0.0907674 :
+|   |   |   |   |   Blood_trans = 0: 0 (26.0/1.0)
+|   |   |   |   |   Blood_trans = 1:
+|   |   |   |   |   |   Na <= 0.809935 : 1 (2.0)
+|   |   |   |   |   |   Na > 0.809935 : 0 (7.0/1.0)
+|   Hypertension Uncomplicated = 1:
+|   |   Diagnosis_0 = 0: 0 (2.0)
+|   |   Diagnosis_0 = 1:
+|   |   |   Crea > 0.113387 : 0 (5.0)
+|   |   |   Crea <= 0.113387 :
+|   |   |   |   CBC_HG <= 0.664261 : 1 (4.0)
+|   |   |   |   CBC_HG > 0.664261 : 0 (4.0/1.0)
+
+
+Simplified Decision Tree:
+
+CBC_RDWCV <= 0.103787 :
+|   Commercial_ALBC = 1: 1 (4.0/2.2)
+|   Commercial_ALBC = 0:
+|   |   LOS <= 0.0422535 : 0 (41.0/2.6)
+|   |   LOS > 0.0422535 :
+|   |   |   GOT <= 0.0489676 :
+|   |   |   |   GOT > 0.0376106 : 0 (32.0/1.4)
+|   |   |   |   GOT <= 0.0376106 :
+|   |   |   |   |   Na <= 0.815895 : 1 (2.0/1.0)
+|   |   |   |   |   Na > 0.815895 : 0 (7.0/1.3)
+|   |   |   GOT > 0.0489676 :
+|   |   |   |   GOT > 0.0674041 : 0 (9.0/1.3)
+|   |   |   |   GOT <= 0.0674041 :
+|   |   |   |   |   CBC_Platelet <= 0.172593 : 0 (5.0/1.2)
+|   |   |   |   |   CBC_Platelet > 0.172593 :
+|   |   |   |   |   |   SEX_F = 0: 1 (3.0/1.1)
+|   |   |   |   |   |   SEX_F = 1:
+|   |   |   |   |   |   |   AGE <= 0.62069 : 0 (5.0/2.3)
+|   |   |   |   |   |   |   AGE > 0.62069 : 1 (5.0/1.2)
+CBC_RDWCV > 0.103787 :
+|   CBC_RDW <= 0.338969 :
+|   |   Alcohol Abuse = 0:
+|   |   |   OP_time_hour <= 0.177645 :
+|   |   |   |   Congestive Heart Failure = 1: 1 (3.0/1.1)
+|   |   |   |   Congestive Heart Failure = 0:
+|   |   |   |   |   Psyciatric disorder_0 = 0: 0 (2.0/1.0)
+|   |   |   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   |   |   GOT <= 0.0429204 : 0 (15.0/1.3)
+|   |   |   |   |   |   GOT > 0.0429204 :
+|   |   |   |   |   |   |   Diagnosis_3 = 1: 1 (3.0/2.1)
+|   |   |   |   |   |   |   Diagnosis_3 = 0:
+|   |   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   |   Drain = 0:
+|   |   |   |   |   |   |   |   |   |   K > 0.4996 : 0 (17.0/2.5)
+|   |   |   |   |   |   |   |   |   |   K <= 0.4996 :
+|   |   |   |   |   |   |   |   |   |   |   GOT <= 0.0685841 : 0 (25.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   GOT > 0.0685841 : 1 (8.0/2.4)
+|   |   |   |   |   |   |   |   |   Drain = 1:
+|   |   |   |   |   |   |   |   |   |   GOT > 0.0678466 : 0 (5.0/1.2)
+|   |   |   |   |   |   |   |   |   |   GOT <= 0.0678466 :
+|   |   |   |   |   |   |   |   |   |   |   OP_time_hour <= 0.154491 : 0 (7.0/1.3)
+|   |   |   |   |   |   |   |   |   |   |   OP_time_hour > 0.154491 : 1 (11.0/3.6)
+|   |   |   |   |   |   |   |   Diabetes = 1:
+|   |   |   |   |   |   |   |   |   GPT <= 0.0448413 : 1 (3.0/1.1)
+|   |   |   |   |   |   |   |   |   GPT > 0.0448413 : 0 (3.0/1.1)
+|   |   |   OP_time_hour > 0.177645 :
+|   |   |   |   LOS <= 0.15493 :
+|   |   |   |   |   Crea <= 0.101871 :
+|   |   |   |   |   |   Diagnosis_5 = 1: 1 (11.0/2.5)
+|   |   |   |   |   |   Diagnosis_5 = 0:
+|   |   |   |   |   |   |   SEX_F = 0:
+|   |   |   |   |   |   |   |   Fluid and Electrolyte Disorders = 1: 1 (8.0/1.3)
+|   |   |   |   |   |   |   |   Fluid and Electrolyte Disorders = 0:
+|   |   |   |   |   |   |   |   |   Anemia_0 = 0: 0 (4.0/2.2)
+|   |   |   |   |   |   |   |   |   Anemia_0 = 1:
+|   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 0:
+|   |   |   |   |   |   |   |   |   |   |   K <= 0.438079 :[S1]
+|   |   |   |   |   |   |   |   |   |   |   K > 0.438079 :
+|   |   |   |   |   |   |   |   |   |   |   |   Valvular Disease = 0: 1 (108.0/12.8)
+|   |   |   |   |   |   |   |   |   |   |   |   Valvular Disease = 1: 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 1:
+|   |   |   |   |   |   |   |   |   |   |   AGE > 0.666667 : 0 (7.0/1.3)
+|   |   |   |   |   |   |   |   |   |   |   AGE <= 0.666667 :
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.193018 : 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.193018 : 1 (9.0/2.4)
+|   |   |   |   |   |   |   SEX_F = 1:
+|   |   |   |   |   |   |   |   CBC_WBC <= 0.0288033 :
+|   |   |   |   |   |   |   |   |   Na <= 0.79251 : 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   Na > 0.79251 :
+|   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.168631 : 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.168631 : 0 (22.0/2.5)
+|   |   |   |   |   |   |   |   CBC_WBC > 0.0288033 :
+|   |   |   |   |   |   |   |   |   Diagnosis_2 = 0:
+|   |   |   |   |   |   |   |   |   |   Psyciatric disorder_0 = 0:
+|   |   |   |   |   |   |   |   |   |   |   Blood_trans = 1: 1 (6.0/2.3)
+|   |   |   |   |   |   |   |   |   |   |   Blood_trans = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   BUN > 0.117568 : 0 (9.0/1.3)
+|   |   |   |   |   |   |   |   |   |   |   |   BUN <= 0.117568 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   Liver Disease = 0: 1 (5.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Liver Disease = 1: 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Psyciatric disorder_0 = 1:
+|   |   |   |   |   |   |   |   |   |   |   BUN <= 0.106262 :
+|   |   |   |   |   |   |   |   |   |   |   |   elx3 = 1: 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   elx3 = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 1: 1 (5.0/2.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 0:[S2]
+|   |   |   |   |   |   |   |   |   |   |   BUN > 0.106262 :
+|   |   |   |   |   |   |   |   |   |   |   |   ASA <= 0.422222 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   Heart disease_0 = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cci1 = 0: 1 (3.0/1.1)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cci1 = 1: 0 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Heart disease_0 = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   elx1 = 0: 0 (3.0/2.1)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   elx1 = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Crea <= 0.0889986 :[S3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Crea > 0.0889986 :[S4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   GPT <= 0.0470899 : 1 (6.0/2.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   GPT > 0.0470899 : 0 (5.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   ASA > 0.422222 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   Liver Disease = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.211852 :[S5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.211852 :[S6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Liver Disease = 1:
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGE <= 0.563218 : 0 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   AGE > 0.563218 : 1 (13.0/1.3)
+|   |   |   |   |   |   |   |   |   Diagnosis_2 = 1:[S7]
+|   |   |   |   |   Crea > 0.101871 :
+|   |   |   |   |   |   Coagulopathy = 1: 1 (2.0/1.0)
+|   |   |   |   |   |   Coagulopathy = 0:
+|   |   |   |   |   |   |   Anemia_0 = 0: 0 (5.0/1.2)
+|   |   |   |   |   |   |   Anemia_0 = 1:
+|   |   |   |   |   |   |   |   Liver Disease = 1: 0 (5.0/1.2)
+|   |   |   |   |   |   |   |   Liver Disease = 0:
+|   |   |   |   |   |   |   |   |   elx3 = 1: 1 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   elx3 = 0:
+|   |   |   |   |   |   |   |   |   |   Crea <= 0.136623 :[S8]
+|   |   |   |   |   |   |   |   |   |   Crea > 0.136623 :
+|   |   |   |   |   |   |   |   |   |   |   CBC_Platelet > 0.210302 : 1 (14.0/1.3)
+|   |   |   |   |   |   |   |   |   |   |   CBC_Platelet <= 0.210302 :
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_RBC <= 0.407431 : 0 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   CBC_RBC > 0.407431 : 1 (3.0/1.1)
+|   |   |   |   LOS > 0.15493 :
+|   |   |   |   |   Coagulopathy = 1: 0 (3.0/2.1)
+|   |   |   |   |   Coagulopathy = 0:
+|   |   |   |   |   |   CBC_RBC <= 0.485514 : 1 (54.0/7.2)
+|   |   |   |   |   |   CBC_RBC > 0.485514 : 0 (4.0/2.2)
+|   |   Alcohol Abuse = 1:
+|   |   |   K <= 0.483591 : 1 (22.0/2.5)
+|   |   |   K > 0.483591 : 0 (3.0/1.1)
+|   CBC_RDW > 0.338969 :
+|   |   Renal Failure = 1: 1 (2.0/1.0)
+|   |   Renal Failure = 0:
+|   |   |   Solid Tumor without Metastasis = 0:
+|   |   |   |   ASA <= 0.333333 : 0 (34.0/1.4)
+|   |   |   |   ASA > 0.333333 :
+|   |   |   |   |   Anemia_0 = 0: 0 (2.0/1.0)
+|   |   |   |   |   Anemia_0 = 1:
+|   |   |   |   |   |   Peptic Ulcer Disease excluding bleeding = 1: 1 (2.0/1.0)
+|   |   |   |   |   |   Peptic Ulcer Disease excluding bleeding = 0:
+|   |   |   |   |   |   |   CBC_RBC > 0.4965 : 1 (5.0/2.3)
+|   |   |   |   |   |   |   CBC_RBC <= 0.4965 :
+|   |   |   |   |   |   |   |   Blood_trans = 0: 0 (58.0/11.6)
+|   |   |   |   |   |   |   |   Blood_trans = 1:
+|   |   |   |   |   |   |   |   |   CBC_MCHC > 0.60574 : 1 (5.0/1.2)
+|   |   |   |   |   |   |   |   |   CBC_MCHC <= 0.60574 :
+|   |   |   |   |   |   |   |   |   |   Na <= 0.805117 : 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Na > 0.805117 : 0 (9.0/1.3)
+|   |   |   Solid Tumor without Metastasis = 1:
+|   |   |   |   CBC_HG <= 0.646735 : 1 (5.0/1.2)
+|   |   |   |   CBC_HG > 0.646735 : 0 (3.0/1.1)
+
+
+Subtree [S1]
+
+Congestive Heart Failure = 1: 1 (7.0/2.4)
+Congestive Heart Failure = 0:
+|   Diagnosis_0 = 0:
+|   |   Blood_trans = 1: 1 (9.0/2.4)
+|   |   Blood_trans = 0:
+|   |   |   CBC_MCV > 0.567719 : 1 (21.0/3.7)
+|   |   |   CBC_MCV <= 0.567719 :
+|   |   |   |   CBC_RDW <= 0.0657074 : 1 (3.0/1.1)
+|   |   |   |   CBC_RDW > 0.0657074 : 0 (8.0/2.4)
+|   Diagnosis_0 = 1:
+|   |   CBC_Platelet <= 0.188441 : 0 (16.0/3.7)
+|   |   CBC_Platelet > 0.188441 :
+|   |   |   LOS <= 0.0704225 :
+|   |   |   |   CBC_Platelet <= 0.218841 : 1 (24.0/6.0)
+|   |   |   |   CBC_Platelet > 0.218841 :
+|   |   |   |   |   Hypertension Uncomplicated = 0:
+|   |   |   |   |   |   CBC_RDW <= 0.0809353 : 1 (3.0/1.1)
+|   |   |   |   |   |   CBC_RDW > 0.0809353 : 0 (13.0/4.7)
+|   |   |   |   |   Hypertension Uncomplicated = 1:
+|   |   |   |   |   |   CBC_HG <= 0.638144 : 1 (4.0/1.2)
+|   |   |   |   |   |   CBC_HG > 0.638144 : 0 (4.0/2.2)
+|   |   |   LOS > 0.0704225 :
+|   |   |   |   UA <= 0.368481 : 1 (12.0/4.7)
+|   |   |   |   UA > 0.368481 : 0 (5.0/1.2)
+
+
+Subtree [S2]
+
+Other Neurological Disorders = 1: 0 (2.0/1.0)
+Other Neurological Disorders = 0:
+|   CBC_RDW <= 0.0438849 : 1 (5.0/1.2)
+|   CBC_RDW > 0.0438849 :
+|   |   CBC_MCHC <= 0.6 :
+|   |   |   CBC_MCHC <= 0.541722 : 1 (2.0/1.0)
+|   |   |   CBC_MCHC > 0.541722 : 0 (34.0/3.8)
+|   |   CBC_MCHC > 0.6 :
+|   |   |   ASA > 0.577778 : 1 (8.0/2.4)
+|   |   |   ASA <= 0.577778 :
+|   |   |   |   UA <= 0.272562 : 1 (9.0/2.4)
+|   |   |   |   UA > 0.272562 : 0 (18.0/3.7)
+
+
+Subtree [S3]
+
+Blood_trans = 1: 1 (15.0/1.3)
+Blood_trans = 0:
+|   Drain = 0: 1 (11.0/1.3)
+|   Drain = 1:
+|   |   K > 0.450429 : 1 (31.0/1.4)
+|   |   K <= 0.450429 :
+|   |   |   CBC_MCV <= 0.547544 : 0 (6.0/2.3)
+|   |   |   CBC_MCV > 0.547544 :
+|   |   |   |   AGE <= 0.597701 : 1 (22.0/1.3)
+|   |   |   |   AGE > 0.597701 :
+|   |   |   |   |   CBC_MCHC > 0.611479 : 0 (3.0/1.1)
+|   |   |   |   |   CBC_MCHC <= 0.611479 :
+|   |   |   |   |   |   ASA > 0.355556 : 1 (7.0/1.3)
+|   |   |   |   |   |   ASA <= 0.355556 :
+|   |   |   |   |   |   |   CBC_MCV <= 0.574737 : 1 (8.0/2.4)
+|   |   |   |   |   |   |   CBC_MCV > 0.574737 : 0 (6.0/2.3)
+
+
+Subtree [S4]
+
+Commercial_ALBC = 1: 1 (2.0/1.0)
+Commercial_ALBC = 0:
+|   K <= 0.413722 : 1 (6.0/2.3)
+|   K > 0.413722 :
+|   |   Blood_trans = 0: 0 (9.0/1.3)
+|   |   Blood_trans = 1:
+|   |   |   CBC_MCV > 0.565877 : 1 (2.0/1.0)
+|   |   |   CBC_MCV <= 0.565877 :
+|   |   |   |   BUN <= 0.157529 : 0 (6.0/1.2)
+|   |   |   |   BUN > 0.157529 : 1 (2.0/1.0)
+
+
+Subtree [S5]
+
+CBC_MCHC <= 0.55585 : 1 (2.0/1.0)
+CBC_MCHC > 0.55585 :
+|   CBC_RBC > 0.378675 : 0 (19.0/1.3)
+|   CBC_RBC <= 0.378675 :
+|   |   Heart disease_0 = 0: 0 (2.0/1.0)
+|   |   Heart disease_0 = 1: 1 (2.0/1.0)
+
+
+Subtree [S6]
+
+Valvular Disease = 1: 1 (4.0/1.2)
+Valvular Disease = 0:
+|   Peptic Ulcer Disease excluding bleeding = 1: 0 (3.0/1.1)
+|   Peptic Ulcer Disease excluding bleeding = 0:
+|   |   Renal Failure = 1: 1 (3.0/1.1)
+|   |   Renal Failure = 0:
+|   |   |   CBC_RDWCV > 0.189995 : 0 (8.0/1.3)
+|   |   |   CBC_RDWCV <= 0.189995 :
+|   |   |   |   elx1 = 0:
+|   |   |   |   |   LOS <= 0.028169 : 1 (3.0/1.1)
+|   |   |   |   |   LOS > 0.028169 :
+|   |   |   |   |   |   Lung disease_0 = 1: 0 (10.0/1.3)
+|   |   |   |   |   |   Lung disease_0 = 0:
+|   |   |   |   |   |   |   CBC_Platelet <= 0.229703 : 0 (3.0/1.1)
+|   |   |   |   |   |   |   CBC_Platelet > 0.229703 : 1 (2.0/1.0)
+|   |   |   |   elx1 = 1:
+|   |   |   |   |   LOS > 0.0985916 : 1 (6.0/1.2)
+|   |   |   |   |   LOS <= 0.0985916 :
+|   |   |   |   |   |   Diagnosis_0 = 0: 0 (5.0/3.2)
+|   |   |   |   |   |   Diagnosis_0 = 1:
+|   |   |   |   |   |   |   BUN > 0.154951 : 0 (5.0/1.2)
+|   |   |   |   |   |   |   BUN <= 0.154951 :
+|   |   |   |   |   |   |   |   LOS <= 0.028169 :
+|   |   |   |   |   |   |   |   |   OP_time_hour <= 0.221557 : 0 (6.0/1.2)
+|   |   |   |   |   |   |   |   |   OP_time_hour > 0.221557 : 1 (5.0/2.3)
+|   |   |   |   |   |   |   |   LOS > 0.028169 :
+|   |   |   |   |   |   |   |   |   Diabetes = 1: 1 (10.0/2.4)
+|   |   |   |   |   |   |   |   |   Diabetes = 0:
+|   |   |   |   |   |   |   |   |   |   GPT <= 0.0312169 : 0 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   |   GPT > 0.0312169 :
+|   |   |   |   |   |   |   |   |   |   |   UA <= 0.29161 : 1 (22.0/2.5)
+|   |   |   |   |   |   |   |   |   |   |   UA > 0.29161 :
+|   |   |   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 1: 1 (7.0/2.4)
+|   |   |   |   |   |   |   |   |   |   |   |   Commercial_ALBC = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   |   UA > 0.33356 : 1 (5.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   UA <= 0.33356 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Crea > 0.0915896 : 0 (7.0/1.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Crea <= 0.0915896 :
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Crea > 0.0802385 : 1 (5.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Crea <= 0.0802385 :[S9]
+
+
+Subtree [S7]
+
+Peptic Ulcer Disease excluding bleeding = 1: 0 (3.0/1.1)
+Peptic Ulcer Disease excluding bleeding = 0:
+|   GPT > 0.0367725 : 1 (21.0/1.3)
+|   GPT <= 0.0367725 :
+|   |   ASA <= 0.444444 : 0 (5.0/1.2)
+|   |   ASA > 0.444444 : 1 (6.0/2.3)
+
+
+Subtree [S8]
+
+Congestive Heart Failure = 1: 0 (3.0/1.1)
+Congestive Heart Failure = 0:
+|   Rheumatoid Arthritis/collagen = 0:
+|   |   Renal Failure = 1: 1 (4.0/3.1)
+|   |   Renal Failure = 0:
+|   |   |   elx1 = 0: 0 (5.0/1.2)
+|   |   |   elx1 = 1:
+|   |   |   |   Diabetes = 0:
+|   |   |   |   |   Diagnosis_3 = 0:
+|   |   |   |   |   |   Hypertension Uncomplicated = 0:
+|   |   |   |   |   |   |   CBC_MCHC <= 0.604856 : 0 (31.0/2.6)
+|   |   |   |   |   |   |   CBC_MCHC > 0.604856 :
+|   |   |   |   |   |   |   |   cci1 = 0: 0 (5.0/3.2)
+|   |   |   |   |   |   |   |   cci1 = 1:
+|   |   |   |   |   |   |   |   |   CBC_RDW <= 0.0907674 :
+|   |   |   |   |   |   |   |   |   |   OP_time_hour > 0.341317 : 0 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   |   OP_time_hour <= 0.341317 :
+|   |   |   |   |   |   |   |   |   |   |   Drain = 1: 1 (19.0/2.5)
+|   |   |   |   |   |   |   |   |   |   |   Drain = 0:
+|   |   |   |   |   |   |   |   |   |   |   |   UA <= 0.357143 : 0 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   |   |   |   UA > 0.357143 : 1 (3.0/1.1)
+|   |   |   |   |   |   |   |   |   CBC_RDW > 0.0907674 :
+|   |   |   |   |   |   |   |   |   |   Blood_trans = 0: 0 (32.0/2.6)
+|   |   |   |   |   |   |   |   |   |   Blood_trans = 1:
+|   |   |   |   |   |   |   |   |   |   |   Na <= 0.809935 : 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Na > 0.809935 : 0 (7.0/2.4)
+|   |   |   |   |   |   Hypertension Uncomplicated = 1:
+|   |   |   |   |   |   |   Diagnosis_0 = 0: 0 (2.0/1.0)
+|   |   |   |   |   |   |   Diagnosis_0 = 1:
+|   |   |   |   |   |   |   |   Crea > 0.113387 : 0 (5.0/1.2)
+|   |   |   |   |   |   |   |   Crea <= 0.113387 :
+|   |   |   |   |   |   |   |   |   CBC_HG <= 0.664261 : 1 (4.0/1.2)
+|   |   |   |   |   |   |   |   |   CBC_HG > 0.664261 : 0 (5.0/3.2)
+|   |   |   |   |   Diagnosis_3 = 1:
+|   |   |   |   |   |   BUN <= 0.114918 : 1 (5.0/2.3)
+|   |   |   |   |   |   BUN > 0.114918 : 0 (4.0/1.2)
+|   |   |   |   Diabetes = 1:
+|   |   |   |   |   UA <= 0.314286 : 0 (2.0/1.0)
+|   |   |   |   |   UA > 0.314286 : 1 (4.0/1.2)
+|   Rheumatoid Arthritis/collagen = 1:
+|   |   Crea <= 0.118692 : 0 (4.0/1.2)
+|   |   Crea > 0.118692 : 1 (5.0/1.2)
+
+
+Subtree [S9]
+
+CBC_WBC <= 0.0338996 : 1 (7.0/2.4)
+CBC_WBC > 0.0338996 : 0 (7.0/2.4)
+
+
+Tree saved
+
+
+Evaluation on training data (1406 items):
+
+	 Before Pruning           After Pruning
+	----------------   ---------------------------
+	Size      Errors   Size      Errors   Estimate
+
+	 457   56( 4.0%)    311   96( 6.8%)    (20.9%)   <<
+
+
