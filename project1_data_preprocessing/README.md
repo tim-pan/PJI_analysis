@@ -3,7 +3,6 @@
 
 -   **NewDataset**\
     New dataset after preprocessing\
-    and the data\_final.names for training and testing dataset
 
 ### FILE
 
