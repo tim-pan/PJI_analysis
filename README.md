@@ -1,8 +1,7 @@
 # PJI_analysis
 These are the projects in Data Mining course.
 ## introduction
-There are two projects in this repository\
-\
+There are two projects in this repository\\
 #### **For Project1**</br>
 Professor asked us to use the [1] by J. Quinlan to be the classifier in project1.\
 The goal of project1 is to do data preprocessing and use c45 source code to classifiy the datapoints\
