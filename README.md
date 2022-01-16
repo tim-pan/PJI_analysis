@@ -27,6 +27,6 @@ pdf files above are the introduction of corresponding project.
   - sklearn0.24.2
   - pandas
   - pytorch1.9.1
-  - colab with P100 GPU
+  - colab with Tesla P100 GPU
 ## reference
 1. http://www2.cs.uregina.ca/~dbd/cs831/notes/ml/dtrees/c4.5/tutorial.html</br>
