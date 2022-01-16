@@ -2,7 +2,7 @@
 ### FOLDER
 
 -   **NewDataset**\
-    New dataset after preprocessing\
+    New dataset after preprocessing
 
 ### FILE
 
