@@ -5,7 +5,8 @@ There are two projects in this repository</br>
 #### **For Project1**</br>
 Professor asked us to use the [1] by J. Quinlan to be the classifier in project1.</br>
 The goal of project1 is to do data preprocessing and use c45 source code to classifiy the datapoints</br>
-In this project, since source code of [1] is extremely old, you need to modify the source code to fit your os and complier</br>
+In this project, since source code of [1] is extremely old, </br>
+you need to modify the source code to fit your os and complier</br>
 For example, change "cfree" to "free"</br>
 Or change "exit" to "exit(1)", and so on.</br>
 #### **For Project2**
