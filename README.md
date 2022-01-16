@@ -1,5 +1,5 @@
 # PJI_analysis
-These are the projects in Data Mining course.
+These are the projects in Data Mining course in NYCU.
 ## introduction
 There are two projects in this repository</br>
 #### **For Project1**</br>
