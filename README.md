@@ -15,14 +15,14 @@ Do a comprehensive survey on different combinations.</br>
 </br>
 pdf files above are the introduction of corresponding project.
 ## Environement
-- For Project1
+- **For Project1**
   - C 
   - python3.7.7
   - sklearn0.24.2
   - pandas
   - ubuntu 20.04
   - GCC 9.3.0
-- For Project2
+- **For Project2**
   - Python3.7.7
   - sklearn0.24.2
   - pandas
