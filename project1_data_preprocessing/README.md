@@ -5,7 +5,7 @@
     New dataset after preprocessing\
     and the data\_final.names for training and testing dataset
 
-### FILE {#file .raw}
+### FILE
 
 -   **print\_out\_decision\_tree.txt**\
     decision tree in txt file.
