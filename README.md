@@ -16,9 +16,9 @@ Do a comprehensive survey on different combinations.</br>
 pdf files above are the introduction of corresponding project.
 ## Environement
 - For Project1
+  - C 
   - python3.7.7
   - sklearn0.24.2
-  - C
   - pandas
   - ubuntu 20.04
   - GCC 9.3.0
