@@ -14,5 +14,10 @@ Professor asked us to tried kinds of classifiers and datasets to decide which co
 Do a comprehensive survey on different combinations.</br>
 </br>
 pdf files above are the introduction of corresponding project.
+## Environement
+- Python3.7.7
+- sklearn0.24.2
+- pytorch1.9.1
+- colab with P100 GPU
 ## reference
 1. http://www2.cs.uregina.ca/~dbd/cs831/notes/ml/dtrees/c4.5/tutorial.html</br>
